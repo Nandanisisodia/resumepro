@@ -42,6 +42,7 @@ const createResume = async (req, res, next) => {
       personalInfo: req.body.personalInfo || {},
       education: req.body.education || [],
       experience: req.body.experience || [],
+      projects: req.body.projects || [],
       skills: req.body.skills || [],
       template: req.body.template || "classic",
     });
@@ -66,7 +67,25 @@ const updateResume = async (req, res, next) => {
       return res.status(403).json({ message: "Not authorized to update this resume" });
     }
 
-    const updated = await Resume.findByIdAndUpdate(req.params.id, req.body, {
+    const allowedFields = [
+      "title",
+      "personalInfo",
+      "education",
+      "experience",
+      "projects",
+      "skills",
+      "certifications",
+      "template",
+    ];
+
+    const updates = {};
+    allowedFields.forEach((field) => {
+      if (req.body[field] !== undefined) {
+        updates[field] = req.body[field];
+      }
+    });
+
+    const updated = await Resume.findByIdAndUpdate(req.params.id, updates, {
       new: true,
       runValidators: true,
     });

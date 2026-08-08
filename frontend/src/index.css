@@ -256,6 +256,63 @@ button:disabled {
   margin-top: 3rem;
 }
 
+/* ATS templates */
+.resume-ats-minimal,
+.resume-ats-modern {
+  font-family: "Georgia", "Times New Roman", serif;
+}
+
+.resume-ats-minimal h2,
+.resume-ats-modern h2 {
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.resume-ats-minimal h2 {
+  color: #111827;
+  border-bottom: 1px solid #111827;
+}
+
+.resume-ats-modern h2 {
+  color: #0f766e;
+  border-bottom: 1px solid #0f766e;
+}
+
+.ats-line-bold {
+  font-weight: 600;
+  margin-bottom: 0.1rem;
+}
+
+.ats-line-sub {
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin-top: 0;
+  margin-bottom: 0.3rem;
+}
+
+.ats-accent {
+  color: #0f766e;
+  font-weight: 400;
+}
+
+.template-select {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.template-select label {
+  font-size: 0.85rem;
+  color: #4b5563;
+}
+
+.template-select select {
+  padding: 0.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
 @media (max-width: 800px) {
   .builder {
     grid-template-columns: 1fr;

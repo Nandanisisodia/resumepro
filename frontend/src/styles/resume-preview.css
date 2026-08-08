@@ -1,0 +1,90 @@
+.resume-preview {
+  background: var(--color-surface);
+  padding: 2.2rem;
+  min-height: 600px;
+  box-shadow: var(--shadow-md);
+  border-radius: var(--radius-sm);
+}
+
+.resume-header h1 {
+  margin: 0;
+}
+
+.resume-contact {
+  color: var(--color-text-muted);
+  margin-top: 0.25rem;
+  font-size: 0.9rem;
+}
+
+.resume-preview h2 {
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 2px solid var(--color-primary);
+  padding-bottom: 0.25rem;
+  margin-top: 1.3rem;
+}
+
+.resume-item {
+  margin-bottom: 0.7rem;
+}
+
+.resume-item-header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.resume-dates {
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+}
+
+.resume-tech-stack {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  margin: 0.2rem 0 0;
+}
+
+.resume-skill-line {
+  margin: 0.2rem 0;
+  font-size: 0.92rem;
+}
+
+/* ATS templates */
+.resume-ats-minimal,
+.resume-ats-modern {
+  font-family: "Georgia", "Times New Roman", serif;
+}
+
+.resume-ats-minimal h2,
+.resume-ats-modern h2 {
+  font-family: var(--font-body);
+}
+
+.resume-ats-minimal h2 {
+  color: #111827;
+  border-bottom: 1px solid #111827;
+}
+
+.resume-ats-modern h2 {
+  color: var(--color-primary);
+  border-bottom: 1px solid var(--color-primary);
+}
+
+.ats-line-bold {
+  font-weight: 600;
+  margin-bottom: 0.1rem;
+}
+
+.ats-line-sub {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  margin-top: 0;
+  margin-bottom: 0.3rem;
+}
+
+.ats-accent {
+  color: var(--color-primary);
+  font-weight: 400;
+}

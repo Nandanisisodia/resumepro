@@ -30,6 +30,18 @@ const PersonalInfoForm = ({ data, onChange }) => {
         value={data.location || ""}
         onChange={handleChange}
       />
+      <input
+        name="linkedin"
+        placeholder="LinkedIn URL (e.g. linkedin.com/in/yourname)"
+        value={data.linkedin || ""}
+        onChange={handleChange}
+      />
+      <input
+        name="github"
+        placeholder="GitHub URL (e.g. github.com/yourusername)"
+        value={data.github || ""}
+        onChange={handleChange}
+      />
       <textarea
         name="summary"
         placeholder="Short professional summary"

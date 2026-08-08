@@ -23,35 +23,42 @@ const Register = () => {
 
   return (
     <div className="auth-page">
-      <form className="auth-form" onSubmit={handleSubmit}>
-        <h2>Create Account</h2>
-        {error && <p className="form-error">{error}</p>}
-        <input
-          placeholder="Full Name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          required
-        />
-        <input
-          type="email"
-          placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-        />
-        <input
-          type="password"
-          placeholder="Password (min 6 characters)"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          minLength={6}
-          required
-        />
-        <button type="submit">Register</button>
-        <p>
-          Already have an account? <Link to="/login">Login</Link>
+      <div className="auth-card">
+        <h2>Create an Account</h2>
+        <p className="auth-card-subtitle">Start building your resume in minutes.</p>
+
+        <form className="auth-form" onSubmit={handleSubmit}>
+          {error && <p className="form-error">{error}</p>}
+          <input
+            placeholder="Full Name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            required
+          />
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password (min 6 characters)"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            minLength={6}
+            required
+          />
+          <button type="submit" className="btn-accent">
+            Register
+          </button>
+        </form>
+
+        <p className="auth-form-footer">
+          Already have an account? <Link to="/login">Sign In</Link>
         </p>
-      </form>
+      </div>
     </div>
   );
 };

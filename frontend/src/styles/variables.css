@@ -1,0 +1,31 @@
+:root {
+  /* Brand palette - deep navy + warm gold, classy/professional */
+  --color-primary: #14213d;
+  --color-primary-light: #1f3a63;
+  --color-primary-dark: #0b1526;
+  --color-accent: #c9982f;
+  --color-accent-dark: #a87e24;
+  --color-accent-light: #e8c877;
+
+  --color-bg: #f8f7f4;
+  --color-surface: #ffffff;
+  --color-text: #1f2937;
+  --color-text-muted: #667085;
+  --color-border: #e4e2dc;
+
+  --color-success: #1a7f5a;
+  --color-danger: #c0392b;
+
+  --font-heading: "Poppins", "Segoe UI", sans-serif;
+  --font-body: "Inter", "Segoe UI", sans-serif;
+
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+
+  --shadow-sm: 0 1px 3px rgba(20, 33, 61, 0.08);
+  --shadow-md: 0 8px 24px rgba(20, 33, 61, 0.1);
+  --shadow-lg: 0 20px 50px rgba(20, 33, 61, 0.14);
+
+  --max-width: 1160px;
+}

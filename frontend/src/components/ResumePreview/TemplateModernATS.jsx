@@ -1,4 +1,4 @@
-const TemplateClassic = ({ resume }) => {
+const TemplateModernATS = ({ resume }) => {
   const {
     personalInfo = {},
     education = [],
@@ -9,7 +9,7 @@ const TemplateClassic = ({ resume }) => {
   } = resume;
 
   return (
-    <div className="resume-preview" id="resume-preview">
+    <div className="resume-preview resume-ats-modern" id="resume-preview">
       <header className="resume-header">
         <h1>{personalInfo.fullName || "Your Name"}</h1>
         <p className="resume-contact">
@@ -21,7 +21,7 @@ const TemplateClassic = ({ resume }) => {
             personalInfo.github,
           ]
             .filter(Boolean)
-            .join(" | ")}
+            .join("  |  ")}
         </p>
       </header>
 
@@ -37,12 +37,12 @@ const TemplateClassic = ({ resume }) => {
           <h2>Experience</h2>
           {experience.map((exp, i) => (
             <div className="resume-item" key={i}>
-              <div className="resume-item-header">
-                <strong>{exp.role}</strong> — {exp.company}
-                <span className="resume-dates">
-                  {exp.startDate} - {exp.endDate || "Present"}
-                </span>
-              </div>
+              <p className="ats-line-bold">
+                {exp.role} <span className="ats-accent">- {exp.company}</span>
+              </p>
+              <p className="ats-line-sub">
+                {exp.startDate} - {exp.endDate || "Present"}
+              </p>
               {exp.description && <p>{exp.description}</p>}
             </div>
           ))}
@@ -54,12 +54,14 @@ const TemplateClassic = ({ resume }) => {
           <h2>Projects</h2>
           {projects.map((proj, i) => (
             <div className="resume-item" key={i}>
-              <div className="resume-item-header">
-                <strong>{proj.name}</strong>
-                {proj.link && <span className="resume-dates">{proj.link}</span>}
-              </div>
+              <p className="ats-line-bold">{proj.name}</p>
               {proj.description && <p>{proj.description}</p>}
-              {proj.techStack && <p className="resume-tech-stack">Tech: {proj.techStack}</p>}
+              {proj.techStack && (
+                <p className="ats-line-sub">
+                  Tech: <span className="ats-accent">{proj.techStack}</span>
+                </p>
+              )}
+              {proj.link && <p className="ats-line-sub">{proj.link}</p>}
             </div>
           ))}
         </section>
@@ -70,12 +72,12 @@ const TemplateClassic = ({ resume }) => {
           <h2>Education</h2>
           {education.map((edu, i) => (
             <div className="resume-item" key={i}>
-              <div className="resume-item-header">
-                <strong>{edu.degree}</strong> — {edu.institution}
-                <span className="resume-dates">
-                  {edu.startYear} - {edu.endYear}
-                </span>
-              </div>
+              <p className="ats-line-bold">
+                {edu.degree} <span className="ats-accent">- {edu.institution}</span>
+              </p>
+              <p className="ats-line-sub">
+                {edu.startYear} - {edu.endYear}
+              </p>
             </div>
           ))}
         </section>
@@ -85,12 +87,9 @@ const TemplateClassic = ({ resume }) => {
         <section>
           <h2>Certifications</h2>
           {certifications.map((cert, i) => (
-            <div className="resume-item" key={i}>
-              <div className="resume-item-header">
-                <strong>{cert.name}</strong> — {cert.issuer}
-                <span className="resume-dates">{cert.year}</span>
-              </div>
-            </div>
+            <p key={i}>
+              {cert.name} - {cert.issuer} ({cert.year})
+            </p>
           ))}
         </section>
       )}
@@ -99,7 +98,7 @@ const TemplateClassic = ({ resume }) => {
         <section>
           <h2>Skills</h2>
           {skills.map((group, i) => (
-            <p key={i} className="resume-skill-line">
+            <p key={i}>
               <strong>{group.category}:</strong> {group.items.join(", ")}
             </p>
           ))}
@@ -109,4 +108,4 @@ const TemplateClassic = ({ resume }) => {
   );
 };
 
-export default TemplateClassic;
+export default TemplateModernATS;

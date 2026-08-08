@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { getResumes, createResume, deleteResume } from "../services/resumeService";
+import { getResumes, deleteResume } from "../services/resumeService";
 
 const Dashboard = () => {
   const [resumes, setResumes] = useState([]);
@@ -18,11 +18,6 @@ const Dashboard = () => {
     loadResumes();
   }, []);
 
-  const handleCreate = async () => {
-    const resume = await createResume({ title: "Untitled Resume" });
-    navigate(`/builder/${resume._id}`);
-  };
-
   const handleDelete = async (id) => {
     if (!window.confirm("Delete this resume?")) return;
     await deleteResume(id);
@@ -35,7 +30,7 @@ const Dashboard = () => {
     <div className="dashboard">
       <div className="dashboard-header">
         <h2>My Resumes</h2>
-        <button onClick={handleCreate}>+ New Resume</button>
+        <button onClick={() => navigate("/templates")}>+ New Resume</button>
       </div>
 
       {resumes.length === 0 ? (

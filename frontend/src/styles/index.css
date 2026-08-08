@@ -1,0 +1,11 @@
+@import "./variables.css";
+@import "./base.css";
+@import "./navbar.css";
+@import "./footer.css";
+@import "./landing.css";
+@import "./auth.css";
+@import "./dashboard.css";
+@import "./builder.css";
+@import "./resume-preview.css";
+@import "./template-select.css";
+@import "./responsive.css";

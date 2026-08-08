@@ -1,0 +1,75 @@
+.site-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: var(--color-primary);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.site-navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.site-navbar-logo-mark {
+  width: 30px;
+  height: 30px;
+}
+
+.site-navbar-logo-text {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: white;
+}
+
+.site-navbar-logo-text span {
+  color: var(--color-accent-light);
+}
+
+.site-navbar-center {
+  display: flex;
+  gap: 2rem;
+}
+
+.site-navbar-center a {
+  color: #cbd5e1;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.15s ease;
+}
+
+.site-navbar-center a:hover,
+.site-navbar-center a.active-link {
+  color: white;
+}
+
+.site-navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+}
+
+.site-navbar-right a {
+  color: #cbd5e1;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.site-navbar-user {
+  color: #cbd5e1;
+  font-size: 0.9rem;
+}
+
+.site-navbar-right .btn-link {
+  color: #cbd5e1;
+}
+
+.site-navbar-right .btn-link:hover {
+  color: white;
+}
